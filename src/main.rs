@@ -1,12 +1,15 @@
-#![no_std]
-#![no_main]
+#![no_std] // Do not link std lib
+#![no_main] // Disable Rust entry points
 
 use core::panic::PanicInfo;
 
-static HELLO: &[u8] = b"Hello World From RustOS";
+static HELLO: &[u8] = b"Hello World!";
 
-#[no_mangle]
+#[no_mangle] // Do not mangle name
 pub extern "C" fn _start() -> ! {
+    // this function is the entry point, since the linker looks for a function
+    // named `_start` by default
+
     let vga_buffer = 0xb8000 as *mut u8;
 
     for (i, &byte) in HELLO.iter().enumerate() {
