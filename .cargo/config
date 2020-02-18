@@ -1,2 +1,2 @@
 [build]
-target = "x86_64-blog_os.json"
+target = "x86_64-hello_os.json"
