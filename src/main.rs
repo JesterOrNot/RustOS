@@ -3,14 +3,17 @@
 
 use core::panic::PanicInfo;
 
-static HELLO: &[u8] = &[0b1001000, 0b1100101, 0b1101100, 0b1101100, 0b1101111];  // Hello
+static HELLO: &[u8] = &[
+    0b1001000, 0b1100101, 0b1101100, 0b1101100, 0b1101111, 0b0, 0b1010111, 0b1101111, 0b1110010,
+    0b1101100, 0b1100100, 0b0, 0b1,
+]; // Hello World :)
 
 #[no_mangle] // Do not mangle name
 pub extern "C" fn _start() -> ! {
     // this function is the entry point, since the linker looks for a function
     // named `_start` by default
 
-    let vga_buffer = 0xb8200 as *mut u8; // Positioning
+    let vga_buffer = 0xb8000 as *mut u8; // Positioning
 
     for (i, &byte) in HELLO.iter().enumerate() {
         unsafe {
