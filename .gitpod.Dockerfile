@@ -10,8 +10,10 @@ RUN sudo apt-get -q update && \
         qemu-system-x86 \
     && sudo rm -rf /var/lib/apt/lists/*
 
+
+RUN basu -cl "rustup toolchain install nightly && rustup default nightly"
+
 RUN bash -cl "rustup target add thumbv7em-none-eabihf rust-src llvm-tools-preview"
 
 RUN bash -cl "cargo install cargo install bootimage --version \"^0.7.7\" && cargo install cargo-xbuild"
 
-RUN basu -cl "rustup toolchain install nightly && rustup default nightly"
