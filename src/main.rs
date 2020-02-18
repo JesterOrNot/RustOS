@@ -3,7 +3,7 @@
 
 use core::panic::PanicInfo;
 
-static HELLO: &[u8] = &[0b1001000];
+static HELLO: &[u8] = &[0b1001000];  // H
 
 #[no_mangle] // Do not mangle name
 pub extern "C" fn _start() -> ! {
