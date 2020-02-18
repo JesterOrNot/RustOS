@@ -8,4 +8,4 @@ ports:
   - port: 35900
     onOpen: ignore
 tasks:
-  - init: cargo build --target thumbv7em-none-eabihf
+  - init: cargo bootimage
