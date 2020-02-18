@@ -11,7 +11,7 @@ RUN sudo apt-get -q update && \
     && sudo rm -rf /var/lib/apt/lists/*
 
 
-RUN basu -cl "rustup toolchain install nightly && rustup default nightly"
+RUN bash -cl "rustup toolchain install nightly && rustup default nightly"
 
 RUN bash -cl "rustup target add thumbv7em-none-eabihf rust-src llvm-tools-preview"
 
