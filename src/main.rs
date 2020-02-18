@@ -3,13 +3,7 @@
 
 use core::panic::PanicInfo;
 
-static HELLO: &[u8] = &[
-    0b1001000, 0b1100101, 0b1101100, 0b1101100, 0b1101111,  // Hello
-    0b0,                                                    // ` `
-    0b1010111, 0b1101111, 0b1110010, 0b1101100, 0b1100100,  // World
-    0b0,                                                    // ` `
-    0b1,                                                    // ☺
-]; // Hello World :)
+static HELLO: &[u8] = b"Hello World From RustOS ☺"
 
 #[no_mangle] // Do not mangle name
 pub extern "C" fn _start() -> ! {
