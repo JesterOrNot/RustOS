@@ -1,5 +1,5 @@
 [package]
-name = "hello_os"
+name = "RustOS"
 version = "0.1.0"
 authors = ["Sean Hellum <seanhellum45@gmail.com>"]
 edition = "2018"
