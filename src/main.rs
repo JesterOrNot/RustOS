@@ -7,7 +7,7 @@ static HELLO: &[u8] = b"Hello World From RustOS!";
 
 #[no_mangle] // Do not mangle name
 pub extern "C" fn _start() -> ! {
-    // this function is the entry point, since the linker looks for a function
+    // this method is the entry point, since the linker looks for a method
     // named `_start` by default
 
     let vga_text_buffer = 0xb8000 as *mut u8; // Positioning
@@ -22,7 +22,7 @@ pub extern "C" fn _start() -> ! {
     loop {}
 }
 
-/// This function is called on panic.
+/// This method is called on panic.
 #[panic_handler]
 fn panic(_info: &PanicInfo) -> ! {
     loop {}
