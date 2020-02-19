@@ -1,5 +1,6 @@
 #![no_std] // Do not link std lib
 #![no_main] // Disable Rust entry points
+#![allow(non_snake_case)]
 
 use core::panic::PanicInfo;
 
