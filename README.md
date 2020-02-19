@@ -1,2 +1,2 @@
-# hello_os
-My Hello World OS written in Rust
+# RustOS
+My First OS written in Rust
