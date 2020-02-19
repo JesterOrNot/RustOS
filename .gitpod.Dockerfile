@@ -13,7 +13,7 @@ RUN sudo apt-get -q update && \
 
 RUN bash -cl "rustup toolchain install nightly && rustup default nightly"
 
-RUN bash -cl "rustup target add thumbv7em-none-eabihf && rustup component add rust-src llvm-tools-preview"
+RUN bash -cl "rustup target add thumbv7em-none-eabihf && rustup component add rust-src llvm-tools-preview rls"
 
 RUN bash -cl "cargo install bootimage --version \"^0.7.7\" && cargo install cargo-xbuild"
 
